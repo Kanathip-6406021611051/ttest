@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Update Shelves</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+  <h1>Update Shelves</h1>
+  <form method="post" action="/updateShelve/<%= Shelve.shelf_id %>">
+    <label for="title">category:</label>
+    <input type="text" id="category" name="category" value="<%= Shelve.category %>">
+    <br>
+    <label for="author">TotalBooks:</label>
+    <input type="text" id="total_books" name="total_books" value="<%= Shelve.total_books %>">
+    <br>
+    <input type="submit" value="Update">
+  </form>
+<a href="/Shelve/<%= Shelve.shelf_id %>">View</a>
+<a href="/deleteShelve/<%= Shelve.shelf_id %>">Delete</a>
+<a href="/Shelve">Back to List</a>
+</body>
+</html>

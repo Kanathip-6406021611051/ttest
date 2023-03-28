@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shelve</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+  <h1><%= Shelve.shelf_id %></h1>
+  <p>category: <%= Shelve.category %></p>
+  <a href="/updateShelve/<%= Shelve.shelf_id %>">Edit</a>
+  <a href="/deleteShelve/<%= Shelve.shelf_id %>">Delete</a>
+  <a href="/Shelve">Back to List</a>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>shelve</title>
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+    <h1>All BOOK IN SHELVE</h1>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Actions</th>
+        </tr>
+        <tr>
+            <% for (let i = 0 ; i < data.length ; i++) { %>
+                <td> <%= data[i].title %> </td>
+                <td> <%= data[i].author %> </td>
+                <td>
+                    <a href="/updateShelve/<%= data[i].id %>">Edit</a>
+                    <a href="/deleteShelve/<%= data[i].id %>">Delete</a>
+                </td>
+        </tr>
+        <% } %>
+    </table>
+    <a href="/Shelve">Back to List</a>
+
+</body>
+</html>
